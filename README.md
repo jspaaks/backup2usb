@@ -31,15 +31,18 @@ Below are the steps to set it up.
 1. Write down the UUID number (mine is 7e89d57b-ff95-4a20-9fd2-be228f1419c8)
 1. Close the dialog.
 1. Close GParted.
+1. Unplug the usb disk.
+1. Plug it back in.
 
 **Setting up the backup**
 
 1. ``git clone https://github.com/jspaaks/backup2usbdisk.git``
 1. ``cd`` into the new directory ``backup2usbdisk``
 1. Near the top of the ``backup-home-to-usbdisk.sh`` Bash script, replace my UUID with your UUID.
-1. Unplug the usb disk.
-1. Plug it back in.
+1. There should be a make file, ``Makefile`` which is used to copy the relevant files from ``backup2usbdisk`` to where they need to go. Run ``make install`` to install the software.
 
 **Verification**
+1. try to run ~/opt/backup2usbdisk/check-last-backup-date.sh. You should see a message appear in your notification area.
+
 
 
