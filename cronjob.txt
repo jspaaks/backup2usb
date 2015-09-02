@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/usr/bin:/bin:/sbin
+0 */3 * * * export DISPLAY=:0 && ${HOME}/opt/backup2usbdisk/check-last-backup-date.sh
+
