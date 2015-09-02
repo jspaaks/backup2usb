@@ -2,7 +2,8 @@ This repository contains the files necessary to semi-automatically do backups. C
 
 Tested on: 
 * Lubuntu 14.10
-* Fedora ?
+* Fedora 22
+* Ubuntu 15.04 Desktop (64 bit)
 
 
 Below are the steps to set it up.
