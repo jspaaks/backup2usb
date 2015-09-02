@@ -78,6 +78,7 @@ sudo rsync --delete    \
            --owner     \
            --devices   \
            --specials  \
+           --dry-run   \
            ${SRC}      \
            ${DEST}
 
