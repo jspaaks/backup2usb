@@ -42,6 +42,7 @@ Below are the steps to set it up.
 1. There should be a make file, ``Makefile`` which is used to copy the relevant files from ``backup2usbdisk`` to where they need to go. Run ``make install`` to install the software.
 
 **Verification**
+
 1. try to run ~/opt/backup2usbdisk/check-last-backup-date.sh. You should see a message appear in your notification area.
 
 
