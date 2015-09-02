@@ -26,7 +26,7 @@ install:
 	@echo "# copied the readme for documentation"
 
 	@./add-cronjob.sh
-	@echo "added the cronjob"
+	@echo "# added the cronjob"
 
 	@echo
-	@echo "done."
+	@echo "# done."
