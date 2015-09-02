@@ -51,4 +51,4 @@ Below are the steps to set it up.
 
 **Recovery of eCryptFS-encrypted files**
 
-1. see [www.howtogeek.com/116297](www.howtogeek.com/116297)
+1. see [http://www.howtogeek.com/116297](http://www.howtogeek.com/116297)
