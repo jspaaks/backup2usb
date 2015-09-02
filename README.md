@@ -39,7 +39,7 @@ Below are the steps to set it up.
 1. ``git clone https://github.com/jspaaks/backup2usbdisk.git``
 1. ``cd`` into the new directory ``backup2usbdisk``
 1. Near the top of the ``backup-home-to-usbdisk.sh`` Bash script, replace my UUID with your UUID.
-1. There should be a make file, ``Makefile`` which is used to copy the relevant files from ``backup2usbdisk`` to where they need to go. Run ``make install`` to install the software.
+1. There should be a file called ``Makefile`` which is used to copy the relevant files from ``backup2usbdisk`` to where they need to go. Run ``make install`` to install the software.
 
 **Verification**
 
