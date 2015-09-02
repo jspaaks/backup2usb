@@ -43,7 +43,8 @@ Below are the steps to set it up.
 
 **Verification**
 
-1. try to run ~/opt/backup2usbdisk/check-last-backup-date.sh. You should see a message appear in your notification area.
+1. try to run ``~/opt/backup2usbdisk/check-last-backup-date.sh``. You should see a message appear in your notification area.
+1. By default, backup-home-to-usbdisk.sh is set up to do a dry run, i.e. without making any changes to your system. Run ``~/opt/backup2usbdisk/backup-home-to-usbdisk.sh``. You should see a message appear in your notification area.
 
 
 
