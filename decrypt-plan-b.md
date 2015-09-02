@@ -1,3 +1,5 @@
+(this readme is based on [http://ubuntuforums.org/showthread.php?t=2286324](http://ubuntuforums.org/showthread.php?t=2286324)).
+
 1. Boot (any) system using a live CD/USBdrive with Linux. I used Fedora 22 for recovery, while the native system had been Lubuntu 14.10
 1. Plug in the USB disk
 1. Make sure the USB disk is mounted. Use a terminal to ``cd`` into where the disk is mounted. There should be two hidden directories: ``.ecryptfs`` and ``.Private.`` The latter contains the encrypted files, the former contains some metadata.
