@@ -18,7 +18,7 @@ Here are the steps to set it up.
 1. In GParted go to menu item 'GParted' -> 'Refresh devices'
 1. The dropdown list should now include your new disk device (for me, '/dev/sdb'). Note the size of this disk (mine says 1.82 TiB).
 1. Select the new device from the dropdown.
-1. It's likely formatted as NTFS, a common file system used on Windows. GParted uses the color green (#42e5ac) to identify the partition as NTFS. We will reformat it to ext4, the default linux ubuntu file system. GParted uses blue (#4b6983) to identify partitions as ext4.
+1. It's likely formatted as NTFS, a common file system used on Windows. GParted uses the color green (#42e5ac) to identify the partition as NTFS. We will reformat it to ext4, the default linux ubuntu file system. Obviously, **this will destroy any data on the partition**. GParted uses blue (#4b6983) to identify partitions as ext4.
 1. In GParted, select the partition by clicking the white-rectangle-with-the-green-outline at the top bar in GParted. The green outline now has a white dashed line to indicate the partition has been selected.
 1. In GParted, go the menu item 'Partition' and click 'unmount'.
 1. Then, go to the menu item 'Partition' and click 'format to' and select 'ext4'.
@@ -32,7 +32,7 @@ Here are the steps to set it up.
 
 **Setting up the backup**
 
-1. git clone https://github.com/jspaaks/backup2usbdisk.git
+1. ``git clone https://github.com/jspaaks/backup2usbdisk.git``
 1. ``cd`` into the new directory ``backup2usbdisk``
 1. Near the top of the ``backup-home-to-usbdisk.sh`` Bash script, replace my UUID with your UUID.
 1. Unplug the usb disk.
