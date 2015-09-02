@@ -44,13 +44,6 @@ lastSyncSRC=${HOME}"/.config/backup2usbdisk/last-sync.txt"
 # url of the remote copy of the last sync date
 lastSyncDEST=${DEST}"last-sync.txt"
 
-str=`cat ${lastSyncSRC}`
-epochLastSync=`date --date="${str}" "+%s"`
-epochNow=`date "+%s"`
-epochDiff=$(($epochNow-$epochLastSync))
-nDays=$(($epochDiff/(60*60*24)))
-nDaysMax=5
-
 # check if the USB_DISK_UUID exists
 if [ -z "$USB_DISK_DEV" ]; then
     notify-send "Error during backup" "I do not know that UUID. Backup aborted." -t 15000 -i ${HOME}/opt/backup2usbdisk/drive-removable-media-usb.svg
