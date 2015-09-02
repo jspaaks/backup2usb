@@ -6,9 +6,11 @@ This repository contains the files necessary to semi-automatically do backups. C
 Here are the steps to set it up.
 
 **Install notification software**
+
 1. The backup scripts uses ``notify-send`` from the ``libnotify-bin`` package to send notifications to the desktop. Install with ``sudo apt-get install libnotify-bin``.
 
 **Formatting the USB disk with GParted**
+
 1. Install GParted with ``sudo apt-get install gparted``
 1. Start GParted (needs root)
 1. In the upper right corner of GParted, your disk devices are listed in a drop-down. Write down which devices you have (e.g. I have only '/dev/sda', the SSD in my laptop)
@@ -29,6 +31,7 @@ Here are the steps to set it up.
 1. Close GParted.
 
 **Setting up the backup**
+
 1. git clone https://github.com/jspaaks/backup2usbdisk.git
 1. ``cd`` into the new directory ``backup2usbdisk``
 1. Near the top of the ``backup-home-to-usbdisk.sh`` Bash script, replace my UUID with your UUID.
