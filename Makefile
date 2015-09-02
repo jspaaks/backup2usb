@@ -28,5 +28,8 @@ install:
 	@./add-cronjob.sh
 	@echo "# added the cronjob"
 
+	@echo "alias backup2usbdisk='${HOME}/opt/backup2usbdisk/backup-home-to-usbdisk.sh'" >> ${HOME}/.bash_aliases
+	@echo "# added a Bash alias 'backup2usbdisk'"
+
 	@echo
 	@echo "# done."
