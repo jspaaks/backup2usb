@@ -47,5 +47,3 @@ Below are the steps to set it up.
 1. By default, backup-home-to-usbdisk.sh is set up to do a dry run, i.e. without making any changes to your system. Run ``~/opt/backup2usbdisk/backup-home-to-usbdisk.sh``. You should see a message appear in your notification area. 
 1. Review the output from the backup script. If it all works and you're happy with the operation, remove the ``--dry-run`` option from the ``rsync`` call in ``~/opt/backup2usbdisk/backup-home-to-usbdisk.sh``
 
-
-
