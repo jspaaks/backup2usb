@@ -1,6 +1,6 @@
 This repository contains the files necessary to semi-automatically do backups. Currently the user's entire /home is backed up (without encryption). The backup process is based on the UUID of the partition on the external USB drive that was supplied to NLeSC employees. A crontab job is used to notify the user when it's time to back up again.
 
-Tested on: 
+Tested on:
 * Lubuntu 14.10  (64 bit)
 * Fedora 22  (64 bit)
 * Ubuntu 15.04 Desktop (64 bit)
@@ -45,6 +45,10 @@ Below are the steps to set it up.
 **Verification**
 
 1. Try to run ``~/opt/backup2usbdisk/check-last-backup-date.sh``. You should see a message appear in your notification area.
-1. By default, backup-home-to-usbdisk.sh is set up to do a dry run, i.e. without making any changes to your system. Run ``~/opt/backup2usbdisk/backup-home-to-usbdisk.sh``. You should see a message appear in your notification area. 
+1. By default, backup-home-to-usbdisk.sh is set up to do a dry run, i.e. without making any changes to your system. Run ``~/opt/backup2usbdisk/backup-home-to-usbdisk.sh``. You should see a message appear in your notification area. The first time you run, there will be many files, so even a dry run will take a few minutes.
 1. Review the output from the backup script. If it all works and you're happy with the operation, remove the ``--dry-run`` option from the ``rsync`` call in ``~/opt/backup2usbdisk/backup-home-to-usbdisk.sh``
+1. The ``make install`` you ran has added a Bash alias for starting the backup script. The next time you start your terminal, you can just type ``backup2usbdisk`` to start the backup.
 
+**Recovery of eCryptFS-encrypted files**
+
+1. see [www.howtogeek.com/116297](www.howtogeek.com/116297)
