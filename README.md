@@ -5,7 +5,7 @@ Tested on
 * Fedora ?
 
 
-Here are the steps to set it up.
+Bekow are the steps to set it up.
 
 **Install notification software**
 
