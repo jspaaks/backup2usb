@@ -7,10 +7,7 @@ Here are the steps to set it up.
 
 **Install notification software**
 
-1. The backup scripts uses ``notify-send`` from the ``libnotify-bin`` package to send notifications to the desktop. You need to install ``libnotify-bin`` with 
-   ```bash
-   sudo apt-get install libnotify-bin
-   ```
+1. The backup scripts uses ``notify-send`` from the ``libnotify-bin`` package to send notifications to the desktop. You need to install ``libnotify-bin`` with ``sudo apt-get install libnotify-bin``
 
 **Formatting the USB disk with GParted**
 
