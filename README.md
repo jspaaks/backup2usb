@@ -52,5 +52,6 @@ Below are the steps to set it up.
 **Recovery of eCryptFS-encrypted files**
 
 1. see [http://www.howtogeek.com/116297](http://www.howtogeek.com/116297)
-1. or [plan B](decrypt-plan-b.md)
+1. or [plan B](decrypt-plan-b.md).
+1. You are strongly advised to verify that your encrypted data is indeed recoverable via one of these methods.
 
