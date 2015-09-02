@@ -1,6 +1,8 @@
-This repository contains the files necessary to semi-automatically do backups. Currently the user's entire /home is backed up (without encryption). The backup process is based on the UUID of the partition on the external USB drive that was supplied to NLeSC employees.
+This repository contains the files necessary to semi-automatically do backups. Currently the user's entire /home is backed up (without encryption). The backup process is based on the UUID of the partition on the external USB drive that was supplied to NLeSC employees. A crontab job is used to notify the user when it's time to back up again.
 
-
+Tested on 
+* Lubuntu 14.10
+* Fedora ?
 
 
 Here are the steps to set it up.
