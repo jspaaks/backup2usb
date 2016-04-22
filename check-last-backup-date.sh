@@ -2,6 +2,13 @@
 
 # this script needs notify-send from libnotify-bin package
 
+# exit on any error
+set -o errexit
+
+# disallow unset variables
+set -o nounset
+
+
 # url of the local copy of the last sync date
 lastSyncSRC=${HOME}"/.config/backup2usbdisk/last-sync.txt"
 

@@ -3,6 +3,14 @@
 # this script needs notify-send from libnotify-bin package
 
 
+# exit on any error
+set -o errexit
+
+# disallow unset variables
+set -o nounset
+
+
+
 # define the UUID of the target disk (edit the number to match your
 # own disk's UUID)
 USB_DISK_UUID=7e89d57b-ff95-4a20-9fd2-be228f1419c8
