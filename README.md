@@ -66,12 +66,15 @@ When moving to a new latop (with a new disk), you can use your encrypted backup 
 1. Plug in the USB disk into the new system. It should get mounted automatically. Mine was mounted here: /media/daisycutter/7e89d57b-ff95-4a20-9fd2-be228f1419c8/
 1. In a terminal, make sure your new system has the eCryptFS utilities: ``sudo apt-get install ecryptfs-utils``
 1. Now you can mount the contents of the '.Private' directory using the ``ecryptfs-recover-private`` command as follows:
+
   ```bash
   # adapt the username and UUID
   sudo ecryptfs-recover-private /media/daisycutter/7e89d57b-ff95-4a20-9fd2-be228f1419c8/daisycutter-encrypted.bak/.Private/
   ```
+  
 1. It will ask you some questions and then tell you where the data is mounted. Mine was mounted at ``/tmp/ecryptfs.j6p5EzJH``.
 1. You can now use ``rsync`` to copy the files from the backup into your new ``home``. I used the following command for this:
+
    ```bash
    # note the trailing slash
    SRC=/tmp/ecryptfs.j6p5EzJH/
