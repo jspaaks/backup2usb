@@ -1,9 +1,11 @@
 This repository contains the files necessary to semi-automatically do backups. Currently the user's entire /home is backed up (using ecryptfs encryption, which the user is assumed to have enabled). The backup process is based on the UUID of the partition on the external USB drive that was supplied to NLeSC employees. A crontab job is used to notify the user when it's time to back up again.
 
 Tested on:
+
 * Lubuntu 14.10  (64 bit)
 * Fedora 22  (64 bit)
 * Ubuntu 15.04 Desktop (64 bit)
+* Lubuntu 16.04 Desktop (64 bit)
 
 
 Below are the steps to set it up.
@@ -54,4 +56,43 @@ Below are the steps to set it up.
 1. see [http://www.howtogeek.com/116297](http://www.howtogeek.com/116297)
 1. or [plan B](decrypt-plan-b.md).
 1. You are strongly advised to verify that your encrypted data is indeed recoverable via one of these methods.
+
+
+**Using your USB disk backup to migrate to a new laptop**
+
+When moving to a new latop (with a new disk), you can use your encrypted backup to bring along the contents of your old ``home`` to your new ``home``.
+
+1. Make sure your backup is up to date
+1. Plug in the USB disk into the new system. It should get mounted automatically. Mine was mounted here: /media/daisycutter/7e89d57b-ff95-4a20-9fd2-be228f1419c8/
+1. In a terminal, make sure your new system has the eCryptFS utilities: ``sudo apt-get install ecryptfs-utils``
+1. Now you can mount the contents of the '.Private' directory using the ``ecryptfs-recover-private`` command as follows:
+  ```bash
+  # adapt the username and UUID
+  sudo ecryptfs-recover-private /media/daisycutter/7e89d57b-ff95-4a20-9fd2-be228f1419c8/daisycutter-encrypted.bak/.Private/
+  ```
+1. It will ask you some questions and then tell you where the data is mounted. Mine was mounted at ``/tmp/ecryptfs.j6p5EzJH``.
+1. You can now use ``rsync`` to copy the files from the backup into your new ``home``. I used the following command for this:
+   ```bash
+   # note the trailing slash
+   SRC=/tmp/ecryptfs.j6p5EzJH/
+
+   # note the trailing slash
+   DEST=/home/daisycutter/
+
+   sudo rsync --delete
+              --verbose
+              --recursive
+              --links
+              --perms
+              --times
+              --group
+              --owner
+              --devices
+              --specials
+              --include ".*"
+              ${SRC}
+              ${DEST}
+
+   ```
+
 
